@@ -19,8 +19,6 @@ Game Created for [GameJamJS 2024](https://gamedevjs.com/jam/2024/)
 #### Title
 <img src="img/Title.png" href="img/Title.png" width="300">
 
-#### First Level
-<img src="img/CANDYMAP3.0.png" href="img/CANDYMAP3.0.png" height="300" >
 
 
 ## Built with
