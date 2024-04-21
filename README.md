@@ -17,10 +17,10 @@ Game Created for [GameJamJS 2024](https://gamedevjs.com/jam/2024/)
 ## Screenshots
 
 #### Title
-<img src="img/Title.png" href="img/Title.png" width="400">
+<img src="img/Title.png" href="img/Title.png" width="300">
 
 #### First Level
-<img src="img/CANDYMAP3.0.png" href="img/CANDYMAP3.0.png" height="300">
+<img src="img/CANDYMAP3.0.png" href="img/CANDYMAP3.0.png" height="300" >
 
 
 ## Built with
@@ -35,6 +35,6 @@ Game Created for [GameJamJS 2024](https://gamedevjs.com/jam/2024/)
 - Kenji C. - [pending](https://github.com/)
 
   
-##Resources/Assets
+## Resources/Assets
 
 - Tilesets- [GatDeSucre On itch.io](https://gatdesucre.itch.io/sugarland-tileset)
