@@ -30,7 +30,7 @@ Game Created for [GameJamJS 2024](https://gamedevjs.com/jam/2024/)
 
 ## Author
 - Sophia B. - [smb78998](https://github.com/smb78998)
-- Kenji C. - [pending](https://github.com/)
+- Kenji C. - [Kenji](https://github.com/kenjisan624)
 
   
 ## Resources/Assets
