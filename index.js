@@ -4,8 +4,8 @@ const canvas = document.querySelector('canvas');
 const c = canvas.getContext('2d');
 
 //the width and hieght are written out a little funky because we want correct aspect ratio
-canvas.width = 64*16;
-canvas.height = 64* 9;
+canvas.width = 32*32;
+canvas.height = 32* 18;
 
 
 
@@ -14,7 +14,7 @@ const backgroundLevel1 = new Sprite({
     x:0,
     y:0
   }, 
-  imageSrc:'./img/CandyMap3.0.png'
+  imageSrc:'./img/V4P1.png'
 });
 
 
@@ -42,6 +42,9 @@ function animate(){
   //2. using requestanimatiomframe
 
   backgroundLevel1.draw();
+  collisionBlocks.forEach((collisionBlock) => {
+    collisionBlock.draw();
+  })
 
   player.velocity.x=0;
   //MOVEMENT, makes sure we are moving in the correct direction of pressed keys

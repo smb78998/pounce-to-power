@@ -18,7 +18,7 @@ class Player {
       y:0
     }
 
-    this.gravity = 1;
+    this.gravity = .4;
   }
 
 
