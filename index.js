@@ -7,6 +7,24 @@ const c = canvas.getContext('2d');
 canvas.width = 32*32;
 canvas.height = 32* 18;
 
+//setting collisions blocks
+const collisionBlocks= [];
+
+const parsedCollisions = collisionsLevel1.parse2D();
+
+parsedCollisions.forEach((row, y) => {
+  row.forEach((symbol, x) => {
+    if(symbol === 4){
+      //push new collisions
+      collisionBlocks.push(new CollisionBlock({
+        position:{
+          x: x*32,
+          y: y*32,
+        }
+      }));
+    }
+  })
+})
 
 
 const backgroundLevel1 = new Sprite({
@@ -19,7 +37,9 @@ const backgroundLevel1 = new Sprite({
 
 
 
-const player = new Player();
+const player = new Player({
+  collisionBlocks: collisionBlocks,
+});
 
 //we want to make sure that we move in the direction of which key is pressed down,so this is a fix for that 
 const keys = {
