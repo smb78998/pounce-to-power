@@ -1,4 +1,5 @@
- //until so that we can reference again 
+
+//until so that we can reference again 
  Array.prototype.parse2D = function(){
   const rows = [];
   //32 is the amount of cells in a row

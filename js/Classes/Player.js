@@ -4,8 +4,8 @@ class Player {
     collisionBlocks = []
   }){
     this.position = {
-      x:100,
-      y:100
+      x:32*6,
+      y:32*14
     }
 
     this.width = 32;
@@ -81,7 +81,11 @@ class Player {
       }
     }
   
-    
+    //CHECK IF DEAD
+    if(this.position.y>=32* 18){
+      this.position.x=100;
+      this.position.y=32*14;
+    }
 
     
 

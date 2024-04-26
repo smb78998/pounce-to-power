@@ -7,6 +7,9 @@ const c = canvas.getContext('2d');
 canvas.width = 32*32;
 canvas.height = 32* 18;
 
+//set value for level 2
+var level2 = 0;
+
 //setting collisions blocks
 const collisionBlocks= [];
 
@@ -74,10 +77,18 @@ function animate(){
     player.velocity.x = -3;
   }
 
+//WHEN PLAYERS GOES TO RIGHT THE BACKGROUND CHANGES 
+if(player.position.x >= 32*31.5){
+  
+}
+
   player.draw();
   player.update();
 
 }
+
+
+
 
 animate();
 
