@@ -1,45 +1,42 @@
+const audio = document.getElementById("BackMusic");
+audio.autoplay= true;
+
+var jumpSound = new Audio('./sound/jump.mp3');
+
+function jump(){
+  jumpSound.play();
+  audio.volume+=0.2;
+}
+
+document.addEventListener('keydown', function(event){
+if(event.key === 'w'){
+  jump();
+}
+});
 
 
 const canvas = document.querySelector('canvas');
 const c = canvas.getContext('2d');
 
 //the width and hieght are written out a little funky because we want correct aspect ratio
-canvas.width = 32*32;
-canvas.height = 32* 18;
-
-//setting collisions blocks
-const collisionBlocks= [];
-
-const parsedCollisions = collisionsLevel1.parse2D();
-
-parsedCollisions.forEach((row, y) => {
-  row.forEach((symbol, x) => {
-    if(symbol === 4){
-      //push new collisions
-      collisionBlocks.push(new CollisionBlock({
-        position:{
-          x: x*32,
-          y: y*32,
-        }
-      }));
-    }
-  })
-})
-
+canvas.width = 64*16;
+canvas.height = 64* 9;
 
 const backgroundLevel1 = new Sprite({
   position:{
     x:0,
     y:0
   }, 
-  imageSrc:'./img/V4P1.png'
+  imageSrc:'./img/CandyMap3.0.png',
 });
-
-
 
 const player = new Player({
-  collisionBlocks: collisionBlocks,
-});
+  imageSrc:'./img/Catty/Idle.png',
+  frameRate: 6,
+}
+);
+
+
 
 //we want to make sure that we move in the direction of which key is pressed down,so this is a fix for that 
 const keys = {
@@ -62,9 +59,6 @@ function animate(){
   //2. using requestanimatiomframe
 
   backgroundLevel1.draw();
-  collisionBlocks.forEach((collisionBlock) => {
-    collisionBlock.draw();
-  })
 
   player.velocity.x=0;
   //MOVEMENT, makes sure we are moving in the correct direction of pressed keys

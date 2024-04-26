@@ -2,21 +2,19 @@ window.addEventListener('keydown',(event)=>{
 
   switch(event.key){
     case 'w':
-      if(player.velocity.y === 0 || player.velocity.y === 1 ){
-        player.velocity.y=-20;
+      if(player.velocity.y === 0){
+        player.velocity.y=-13;
       }
-      console.log('w');
-      console.log(player.velocity.y)
       break;
 
      case 'a':
       //move to left
-      player.velocity.x = -4;   
+      player.velocity.x = -3;   
       keys.a.pressed = true;
       break;   
     case 'd':
       //move to right 
-      player.velocity.x = 4;
+      player.velocity.x = 3;
       keys.d.pressed = true;
       break;
   }
