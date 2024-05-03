@@ -4,11 +4,10 @@ const canvas = document.querySelector('canvas');
 const c = canvas.getContext('2d');
 
 //the width and hieght are written out a little funky because we want correct aspect ratio
-canvas.width = 32*32;
+canvas.width = 32*48;
 canvas.height = 32* 18;
 
-//set value for level 2
-var level2 = 0;
+
 
 //setting collisions blocks
 const collisionBlocks= [];
@@ -21,8 +20,8 @@ parsedCollisions.forEach((row, y) => {
       //push new collisions
       collisionBlocks.push(new CollisionBlock({
         position:{
-          x: x*32,
-          y: y*32,
+          x: x*48,
+          y: y*18,
         }
       }));
     }
@@ -35,7 +34,7 @@ const backgroundLevel1 = new Sprite({
     x:0,
     y:0
   }, 
-  imageSrc:'./img/V4P1.png'
+  imageSrc:'./img/V5P1.png'
 });
 
 
