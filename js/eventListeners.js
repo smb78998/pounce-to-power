@@ -11,12 +11,12 @@ window.addEventListener('keydown',(event)=>{
 
      case 'a':
       //move to left
-      player.velocity.x = -4;   
+      player.velocity.x = -8;   
       keys.a.pressed = true;
       break;   
     case 'd':
       //move to right 
-      player.velocity.x = 4;
+      player.velocity.x = 8;
       keys.d.pressed = true;
       break;
   }
