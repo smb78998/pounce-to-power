@@ -57,6 +57,16 @@ const keys = {
 
 }
 
+function ifWin(){
+  if(player.position.x>=1440 ){
+    c.font = "80px serif";  
+    c.fillText("You Win!", 32*20, 32*9);
+    c.fillStyle = "#000";
+  }
+
+  
+}
+
 function animate(){
   window.requestAnimationFrame(animate);
   //THERE ARE A COUPLE WAYS TO ANIMATE
@@ -64,9 +74,10 @@ function animate(){
   //2. using requestanimatiomframe
 
   backgroundLevel1.draw();
-  collisionBlocks.forEach((collisionBlock) => {
-    collisionBlock.draw();
-  })
+  //draw the red collision blocks
+  // collisionBlocks.forEach((collisionBlock) => {
+  //   collisionBlock.draw();
+  // })
 
   player.velocity.x=0;
   //MOVEMENT, makes sure we are moving in the correct direction of pressed keys
@@ -83,6 +94,7 @@ if(player.position.x >= 32*31.5){
 
   player.draw();
   player.update();
+  ifWin();
 
 }
 
