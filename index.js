@@ -34,7 +34,7 @@ const backgroundLevel1 = new Sprite({
     x:0,
     y:0
   }, 
-  imageSrc:'./img/V5P1.png'
+  imageSrc:'./img/v5p1.png'
 });
 
 
