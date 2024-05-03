@@ -2,7 +2,7 @@
 
 Currently a Work In Progress
 
-Game Created for [GameJamJS 2024](https://gamedevjs.com/jam/2024/)
+## [Live Link](https://pounce-to-power.vercel.app/)
 
 ## Table of contents
 
